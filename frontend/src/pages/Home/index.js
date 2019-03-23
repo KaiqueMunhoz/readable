@@ -8,7 +8,7 @@ class Home extends React.Component {
   
   render() {
     return (
-      <div id="layout" class="pure-g">
+      <div class="pure-g">
         <Header />
         <main class="content pure-u-1 pure-u-md-3-4">
           <Posts />

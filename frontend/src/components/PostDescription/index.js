@@ -1,6 +1,5 @@
-
-
 import React from 'react'
+import './PostDescription.css'
 
 const PostDescription = () => {
   return (

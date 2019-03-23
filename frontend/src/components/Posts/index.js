@@ -1,11 +1,10 @@
-
-
-import React from 'react';
+import React from 'react'
 import Post from './Post'
+import './Posts.css'
 
 const Posts = () => {
   return (
-    <div class="posts">
+    <div>
       <h1 class="content-subhead">Pinned Post</h1>
       <Post />
     </div>
@@ -13,4 +12,4 @@ const Posts = () => {
   )
 }
 
-export default Posts;
+export default Posts

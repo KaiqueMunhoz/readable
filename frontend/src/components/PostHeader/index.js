@@ -1,10 +1,9 @@
-
-
 import React from 'react'
+import './PostHeader.css'
 
 const PostHeader = () => {
   return (
-    <header class="post-header">
+    <header>
       <img
         width="48"
         height="48"
@@ -17,7 +16,7 @@ const PostHeader = () => {
 
       <p class="post-meta">
         By{" "}
-        <a href="#" class="post-author">
+        <a href="#">
           Tilo Mitra
         </a>{" "}
         under{" "}
