@@ -1,0 +1,24 @@
+.nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav-item {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+.nav-item a {
+  background: transparent;
+  border: 2px solid rgb(176, 202, 219);
+  color: #fff;
+  margin-top: 1em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 85%;
+}
+.nav-item a:hover,
+.nav-item a:focus {
+  border: 2px solid rgb(61, 146, 201);
+  text-decoration: none;
+}
