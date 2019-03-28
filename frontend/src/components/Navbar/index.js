@@ -7,14 +7,20 @@ const Navbar = () => {
       <nav class="nav">
         <ul class="nav-list">
           <li class="nav-item">
-            <a class="pure-button" href="http://purecss.io">
-              Pure
-            </a>
+            {/* Link para ordenar por essa categoria */}
+            <button class="pure-button">
+              React
+            </button>
           </li>
           <li class="nav-item">
-            <a class="pure-button" href="http://yuilibrary.com">
-              YUI Library
-            </a>
+            <button class="pure-button">
+              React-Redux
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="pure-button">
+              React-Native
+            </button>
           </li>
         </ul>
       </nav>
