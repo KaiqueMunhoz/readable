@@ -1,24 +1,23 @@
-import React from 'react'
-import './Navbar.css'
+import React from "react";
+import './Navbar.css';
 
 const Navbar = () => {
   return (
-    <div>
-      <nav class="nav">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a class="pure-button" href="http://purecss.io">
-              Pure
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="pure-button" href="http://yuilibrary.com">
-              YUI Library
-            </a>
-          </li>
-        </ul>
-      </nav>
+    <div id="main" class="pure-u-1">
+      <div class="email-content">
+        <div class="email-content-header pure-g">
+          <div class="pure-u-1-2 subtitle">
+            <h2 class="email-content-title">{" "}</h2>
+          </div>
+          <div class="email-content-controls pure-u-1-2">
+            <button class="secondary-button pure-button">Order by Vote</button>
+            <button class="secondary-button pure-button">New Post</button>
+          </div>
+        </div>
+      </div>
     </div>
-  )
-}
-export default Navbar
+  );
+};
+
+export default Navbar;
+

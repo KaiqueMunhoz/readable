@@ -5,7 +5,7 @@ import './Posts.css'
 const Posts = () => {
   return (
     <div>
-      <h1 class="content-subhead">Pinned Post</h1>
+      <h1 class="content-subhead">Category</h1>
       <Post />
     </div>
 
