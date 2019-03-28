@@ -9,9 +9,8 @@ const Header = () => {
     <div>
       <div class="sidebar pure-u-1 pure-u-md-1-4">
         <div class="header">
-          <h1 class="brand-title">A Sample Blog</h1>
-          <h2 class="brand-tagline">Creating a blog layout using Pure</h2>
-
+          <h1 class="brand-title">Readable</h1>
+          <h2 class="brand-tagline">Udacity Nanodegree</h2>
           <Navbar />
         </div>
       </div>
