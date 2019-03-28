@@ -4,13 +4,6 @@ import './PostHeader.css'
 const PostHeader = () => {
   return (
     <header>
-      <img
-        width="48"
-        height="48"
-        alt="Tilo Mitra&#x27;s avatar"
-        class="post-avatar"
-        src="img/common/tilo-avatar.png"
-      />
 
       <h2 class="post-title">Introducing Pure</h2>
 
