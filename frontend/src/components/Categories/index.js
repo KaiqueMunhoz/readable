@@ -1,7 +1,7 @@
 import React from 'react'
-import './Navbar.css'
+import './Categories.css'
 
-const Navbar = () => {
+const Categories = () => {
   return (
     <div>
       <nav class="nav">
@@ -27,4 +27,4 @@ const Navbar = () => {
     </div>
   )
 }
-export default Navbar
+export default Categories

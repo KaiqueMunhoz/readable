@@ -1,6 +1,6 @@
 
 import React from 'react'
-import Navbar from '../Navbar'
+import Categories from '../Categories'
 import './Header.css'
 
 const Header = () => {
@@ -11,7 +11,7 @@ const Header = () => {
         <div class="header">
           <h1 class="brand-title">Readable</h1>
           <h2 class="brand-tagline">Udacity Nanodegree</h2>
-          <Navbar />
+          <Categories />
         </div>
       </div>
     </div>
