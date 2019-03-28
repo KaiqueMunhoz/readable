@@ -1,10 +1,10 @@
 import React from 'react';
 
-const App = () => {
+const PostNew = () => {
 
   return (
     <div></div>
   )
-};
+}
 
-export default App;
+export default PostNew;
