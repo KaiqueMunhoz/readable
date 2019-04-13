@@ -1,6 +1,6 @@
 import React from "react";
 import "./Categories.css";
-
+import PropTypes from "prop-types";
 import Category from "./Category";
 import { connect } from "react-redux";
 
@@ -16,6 +16,10 @@ const Categories = ({ categories }) => {
       </nav>
     </div>
   );
+};
+
+Categories.propTypes = {
+  categories: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
 const mapStateToProps = state => ({
