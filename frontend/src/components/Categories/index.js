@@ -1,27 +1,24 @@
-import React from 'react'
-import './Categories.css'
+import React from "react";
+import "./Categories.css";
 
-import Category from './Category';
-import {getAllCategories} from '../../actions/categoriesActions'
-import {connect} from 'react-redux'
-class Categories extends React.Component {
+import Category from "./Category";
+import { connect } from "react-redux";
 
-  componentDidMount() {
-    this.props.dispatch(getAllCategories())
-  }
+const Categories = ({ categories }) => {
+  return (
+    <div>
+      <nav className="nav">
+        <ul className="nav-list">
+          {categories.map(category => (
+            <Category key={category + Math.random()} title={category} />
+          ))}
+        </ul>
+      </nav>
+    </div>
+  );
+};
 
-  render() {
-    return (
-      <div>
-        <nav className="nav">
-          <ul className="nav-list">
-            {/* {this.props.categories.map(category => {
-              <Category key={category} title={category} />
-            })} */}
-          </ul>
-        </nav>
-      </div>
-    )
-  }
-}
-export default connect(state => ({categories: state.categories}))(Categories)
+const mapStateToProps = state => ({
+  categories: state.categories
+});
+export default connect(mapStateToProps)(Categories);
