@@ -1,5 +1,5 @@
 const initialState = {
-  categories: ['Edneilo', 'Breno', 'Dodo'],
+  categories: [],
 };
 
 export default initialState;
