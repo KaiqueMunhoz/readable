@@ -1,7 +1,5 @@
-
-
-import React from 'react';
-import FooterItem from './FooterItem'
+import React from "react";
+import FooterItem from "./FooterItem";
 
 const FooterItems = () => {
   return (
@@ -10,7 +8,7 @@ const FooterItems = () => {
       <FooterItem />
       <FooterItem />
     </ul>
-  )
-}
+  );
+};
 
 export default FooterItems;

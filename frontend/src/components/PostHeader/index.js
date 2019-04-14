@@ -1,5 +1,5 @@
 import React from "react";
-import "./PostHeader.css";
+import "./style.css";
 
 const PostHeader = ({ title, voteScore, author }) => {
   return (

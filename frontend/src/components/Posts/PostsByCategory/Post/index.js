@@ -1,7 +1,7 @@
 import React from "react";
 import PostHeader from "../../../PostHeader";
 import PostDescription from "../../../PostDescription";
-import "./Post.css";
+import "./style.css";
 
 const Post = props => {
   const { title, voteScore, author } = props.post;

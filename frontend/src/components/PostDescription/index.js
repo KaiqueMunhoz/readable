@@ -1,5 +1,5 @@
 import React from "react";
-import "./PostDescription.css";
+import "./style.css";
 
 const PostDescription = ({ body, commentCount, timestamp }) => {
   return (

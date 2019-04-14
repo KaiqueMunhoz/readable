@@ -1,6 +1,6 @@
 import React from "react";
 import Post from "./Post";
-import "./PostsByCategory.css";
+import "./style.css";
 
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
