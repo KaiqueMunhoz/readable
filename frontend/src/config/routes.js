@@ -2,9 +2,9 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 //Pages
-import Home from './pages/Home'
-import PostNew from './pages/PostNew'
-import PostDetails from './pages/PostDetails'
+import Home from '../pages/Home'
+import PostNew from '../pages/PostNew'
+import PostDetails from '../pages/PostDetails'
 
 const Routes = (props) => {
 

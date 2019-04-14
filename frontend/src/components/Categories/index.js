@@ -1,30 +1,53 @@
-import React from 'react'
-import './Categories.css'
+import React from "react";
+import "./Categories.css";
+import PropTypes from "prop-types";
+import Category from "./Category";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import * as CategoriesActions from "../../store/actions/categories";
 
-const Categories = () => {
-  return (
-    <div>
-      <nav class="nav">
-        <ul class="nav-list">
-          <li class="nav-item">
-            {/* Link para ordenar por essa categoria */}
-            <button class="pure-button">
-              React
-            </button>
-          </li>
-          <li class="nav-item">
-            <button class="pure-button">
-              React-Redux
-            </button>
-          </li>
-          <li class="nav-item">
-            <button class="pure-button">
-              React-Native
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  )
+class Categories extends React.Component {
+  componentDidMount() {
+    this.props.categoriesRequest();
+  }
+
+  render() {
+    const { categories } = this.props;
+
+    return (
+      <div>
+        <nav className="nav">
+          <ul className="nav-list">
+            {categories.map(category => (
+              <Category
+                key={category.name + category.path}
+                title={category.name}
+              />
+            ))}
+          </ul>
+        </nav>
+      </div>
+    );
+  }
 }
-export default Categories
+
+Categories.propTypes = {
+  categories: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      path: PropTypes.string
+    })
+  )
+};
+
+const mapStateToProps = state => ({
+  categories: state.categories
+});
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(CategoriesActions, dispatch);
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Categories);
