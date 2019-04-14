@@ -1,11 +1,8 @@
 export const CATEGORIES_REQUEST = 'CATEGORIES_REQUEST';
 export const CATEGORIES_SUCCESS = 'CATEGORIES_SUCCESS';
 
-export const categoriesRequest = repository => ({
-  type: CATEGORIES_REQUEST,
-  payload: {
-    repository
-  }
+export const categoriesRequest = () => ({
+  type: CATEGORIES_REQUEST
 })
 
 export const categoriesSuccess = data => ({
