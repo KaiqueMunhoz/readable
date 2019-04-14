@@ -1,5 +1,5 @@
 import React from "react";
-import "./Categories.css";
+import "./style.css";
 import PropTypes from "prop-types";
 import Category from "./Category";
 import { connect } from "react-redux";
