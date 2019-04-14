@@ -8,7 +8,7 @@ const Post = props => {
   const { body, commentCount, timestamp } = props.post;
 
   return (
-    <section class="post">
+    <section className="post">
       <PostHeader title={title} voteScore={voteScore} author={author} />
       <PostDescription
         body={body}

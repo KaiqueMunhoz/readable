@@ -4,12 +4,12 @@ import "./PostHeader.css";
 const PostHeader = ({ title, voteScore, author }) => {
   return (
     <header>
-      <h2 class="post-title">{title}</h2>
+      <h2 className="post-title">{title}</h2>
 
-      <p class="post-meta">
+      <p className="post-meta">
         By <span>{author}</span> {voteScore}
-        <button class="post-category post-category-design">Up</button>
-        <button class="post-category post-category-js">Down</button>
+        <button className="post-category post-category-design">Up</button>
+        <button className="post-category post-category-js">Down</button>
       </p>
     </header>
   );

@@ -18,7 +18,7 @@ class PostsByCategory extends React.Component {
       <div>
         {posts.map(post => (
           <div key={post.id + post.title}>
-            <h1 class="content-subhead"> {post.category} </h1>
+            <h1 className="content-subhead"> {post.category} </h1>
             <Post post={post} />
           </div>
         ))}
