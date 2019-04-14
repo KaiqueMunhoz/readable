@@ -4,6 +4,7 @@ import Header from "../../components/Header";
 import Posts from "../../components/Posts";
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
+import Modal from "../../components/Modal";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
         <Navbar />
         <Posts />
         <Footer />
+        <Modal />
       </main>
     </div>
   );

@@ -13,7 +13,9 @@ const Navbar = () => {
             <button className="secondary-button pure-button">
               Order by Vote
             </button>
-            <button className="secondary-button pure-button">New Post</button>
+            <label className="secondary-button pure-button" for="modal-1">
+              New Post
+            </label>
           </div>
         </div>
       </div>
