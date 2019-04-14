@@ -1,15 +1,13 @@
-import React from 'react'
-import Post from './Post'
-import './Posts.css'
+import React from "react";
+import "./Posts.css";
+import PostsByCategory from "./PostsByCategory";
 
 const Posts = () => {
   return (
     <div>
-      <h1 class="content-subhead">Category</h1>
-      <Post />
+      <PostsByCategory />
     </div>
+  );
+};
 
-  )
-}
-
-export default Posts
+export default Posts;
