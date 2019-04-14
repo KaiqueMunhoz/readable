@@ -21,7 +21,7 @@ class Categories extends React.Component {
             {categories.map(category => (
               <Category
                 key={category.name + category.path}
-                title={category.name}
+                category={category.name}
               />
             ))}
           </ul>
