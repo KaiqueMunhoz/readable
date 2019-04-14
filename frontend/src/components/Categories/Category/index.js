@@ -2,11 +2,15 @@ import React from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
 
-const Category = ({ title }) => {
+const Category = ({ category }) => {
+  const handleClick = () => {
+    console.log("clicou");
+  };
+
   return (
     <li className="nav-item">
-      <Link to="" className="pure-button">
-        {title}
+      <Link to={`/${category}`} onClick={handleClick} className="pure-button">
+        {category}
       </Link>
     </li>
   );
