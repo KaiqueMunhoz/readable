@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
 
 const FooterItem = () => {
   return (
-    <li class="pure-menu-item">
-      <a href="http://purecss.io/" class="pure-menu-link">
+    <li className="pure-menu-item">
+      <a href="http://purecss.io/" className="pure-menu-link">
         About
       </a>
     </li>
-  )
-}
+  );
+};
 
-export default FooterItem
+export default FooterItem;
