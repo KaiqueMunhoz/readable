@@ -2,9 +2,17 @@ import React from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
 
-const Category = ({ category }) => {
+//Redux
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import * as PostsActions from "../../../store/actions/posts";
+
+const Category = props => {
+  const { category, postsByCategoryRequest } = props;
+
   const handleClick = () => {
-    console.log("clicou");
+    postsByCategoryRequest(category);
+    console.log("page");
   };
 
   return (
@@ -16,4 +24,14 @@ const Category = ({ category }) => {
   );
 };
 
-export default Category;
+const mapStateToProps = state => ({
+  postsByCategory: state
+});
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(PostsActions, dispatch);
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Category);
