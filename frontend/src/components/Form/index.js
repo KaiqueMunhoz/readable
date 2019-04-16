@@ -2,24 +2,37 @@ import React from "react";
 import "./style.css";
 
 const Form = () => (
-  <div>
-    <form className="pure-form">
+  <div className="container">
+    <form className="pure-form pure-input-1">
       <fieldset className="pure-group">
-        <input type="text" className="pure-input-1-2" placeholder="Username" />
-        <input type="text" className="pure-input-1-2" placeholder="Password" />
-        <input type="email" className="pure-input-1-2" placeholder="Email" />
+        <select>
+          <option selected="true" disabled="disabled">
+            Category
+          </option>
+          <option>React</option>
+          <option>Redux</option>
+          <option>Udacity</option>
+        </select>
+        <input type="text" className="pure-input-1" placeholder="Author" />
       </fieldset>
 
       <fieldset className="pure-group">
-        <input type="text" className="pure-input-1-2" placeholder="A title" />
-        <textarea className="pure-input-1-2" placeholder="Textareas work too" />
+        <input type="text" className="pure-input-1" placeholder="Title" />
+        <input type="text" className="pure-input-1" placeholder="Body" />
+        <textarea className="pure-input-1" placeholder="Your text here..." />
       </fieldset>
 
       <button
         type="submit"
-        className="pure-button pure-input-1-2 pure-button-primary"
+        className="pure-button pure-input-2-5 pure-button-primary"
       >
-        Sign in
+        Submit
+      </button>
+      <button
+        type="submit"
+        className="pure-button pure-button-success pure-input-2-5"
+      >
+        Cancel
       </button>
     </form>
   </div>
