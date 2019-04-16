@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-const PostDescription = ({ body, commentCount, timestamp }) => {
+const PostDescription = ({ body, commentCount, voteScore }) => {
   return (
     <div className="post-description">
       <p>{body}</p>

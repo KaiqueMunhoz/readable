@@ -9,11 +9,11 @@ const Post = props => {
 
   return (
     <section className="post">
-      <PostHeader title={title} voteScore={voteScore} author={author} />
+      <PostHeader title={title} author={author} timestamp={timestamp} />
       <PostDescription
         body={body}
         commentCount={commentCount}
-        timestamp={timestamp}
+        voteScore={voteScore}
       />
     </section>
   );
