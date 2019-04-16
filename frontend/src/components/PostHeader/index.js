@@ -8,9 +8,7 @@ const PostHeader = ({ title, timestamp, author }) => {
       <h2 className="post-title">{title}</h2>
 
       <p className="post-meta">
-        By <span>{author}</span> published {DateHelper(timestamp)}
-        <button className="post-category post-category-design">Up</button>
-        <button className="post-category post-category-js">Down</button>
+        By <strong>{author}</strong> published {DateHelper(timestamp)}
       </p>
     </header>
   );
