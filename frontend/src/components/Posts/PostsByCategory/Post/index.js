@@ -4,17 +4,18 @@ import PostDescription from "../../../PostDescription";
 import "./style.css";
 
 const Post = props => {
-  const { title, voteScore, author } = props.post;
-  const { body, commentCount, timestamp } = props.post;
+  const { title, voteScore, commentCount, author } = props.post;
+  const { body, timestamp } = props.post;
 
   return (
     <section className="post">
-      <PostHeader title={title} author={author} timestamp={timestamp} />
-      <PostDescription
-        body={body}
+      <PostHeader
+        title={title}
         commentCount={commentCount}
-        voteScore={voteScore}
+        author={author}
+        timestamp={timestamp}
       />
+      <PostDescription body={body} voteScore={voteScore} />
     </section>
   );
 };
