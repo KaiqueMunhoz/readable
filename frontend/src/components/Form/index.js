@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import { Link } from "react-router-dom";
 
 const Form = () => (
   <div className="container">
@@ -28,12 +29,9 @@ const Form = () => (
       >
         Submit
       </button>
-      <button
-        type="submit"
-        className="pure-button pure-button-success pure-input-2-5"
-      >
+      <Link to={"/"} className="pure-button pure-button-success pure-input-2-5">
         Cancel
-      </button>
+      </Link>
     </form>
   </div>
 );
