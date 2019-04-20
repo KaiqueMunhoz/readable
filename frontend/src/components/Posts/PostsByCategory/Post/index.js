@@ -3,10 +3,7 @@ import PostHeader from "../../../PostHeader";
 import PostDescription from "../../../PostDescription";
 import "./style.css";
 
-//Redux
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import * as PostsActions from "../../../../store/actions/posts";
+
 
 const Post = props => {
   const {
@@ -40,13 +37,5 @@ const Post = props => {
     </section>
   );
 };
-const mapStateToProps = state => ({
-  postDetails: state
-});
-const mapDispatchToProps = dispatch =>
-  bindActionCreators(PostsActions, dispatch);
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Post);
+export default Post;
