@@ -2,13 +2,15 @@ import React, { Fragment } from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
 
-const PostDescription = ({ body, voteScore }) => {
+const PostDescription = ({ body, voteScore, id, handlePostDetails }) => {
   return (
     <Fragment>
       <div className="post-description">
         <p>
-          {/* Alterar */}
-          {body} <Link to={"/redux/1"}>More Details</Link>
+          {body}
+          <Link to={`/posts/${id}`} onClick={handlePostDetails}>
+            More Details
+          </Link>
         </p>
       </div>
       <div>
