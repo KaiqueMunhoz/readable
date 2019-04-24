@@ -1,6 +1,10 @@
 import api from "../../services/apis/baseAPI";
 import { call, put } from "redux-saga/effects";
-import { postsSuccess, postsByCategorySuccess } from "../actions/posts";
+import {
+  postsSuccess,
+  postsByCategorySuccess,
+  postsUpdateVoteSuccess
+} from "../actions/posts";
 
 export function* posts() {
   const { data } = yield call(api.get, "/posts");
@@ -20,4 +24,13 @@ export function* postsDetails(action) {
   const { data } = yield call(api.get, `/posts/${id}`);
 
   yield put(postsByCategorySuccess(data));
+}
+
+export function* postsUpdateVote(action) {
+  const { id, option } = action.payload;
+  const { data } = yield call(api.post, `/posts/${id}`, { option });
+
+  console.log(data);
+
+  yield put(postsUpdateVoteSuccess(data));
 }
