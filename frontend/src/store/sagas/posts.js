@@ -14,3 +14,10 @@ export function* postsByCategory(action) {
 
   yield put(postsByCategorySuccess(data));
 }
+
+export function* postsDetails(action) {
+  const id = action.payload;
+  const { data } = yield call(api.get, `/posts/${id}`);
+
+  yield put(postsByCategorySuccess(data));
+}

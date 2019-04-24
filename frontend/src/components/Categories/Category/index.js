@@ -12,7 +12,6 @@ const Category = props => {
 
   const handleClick = () => {
     postsByCategoryRequest(category);
-    console.log("page");
   };
 
   return (

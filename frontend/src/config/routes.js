@@ -11,9 +11,9 @@ const Routes = () => {
     <Switch>
       <Route path="/" exact render={() => <Home />} />
       <Route path="/new" render={() => <PostNew />} />
+      <Route path="/posts/:id" render={() => <PostDetails />} />
+      <Route path="/edit/:id" render={() => <PostNew />} />
       <Route path="/:category" render={() => <Home />} />
-      <Route path="/:category/:post_id" render={() => <PostDetails />} />
-      <Route path="/edit/:post_id" render={() => <PostNew />} />
     </Switch>
   );
 };

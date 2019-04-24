@@ -3,9 +3,22 @@ import PostHeader from "../../../PostHeader";
 import PostDescription from "../../../PostDescription";
 import "./style.css";
 
+
+
 const Post = props => {
-  const { title, voteScore, commentCount, author } = props.post;
-  const { body, timestamp } = props.post;
+  const {
+    title,
+    voteScore,
+    commentCount,
+    author,
+    body,
+    timestamp,
+    id
+  } = props.post;
+
+  const handlePostDetails = () => {
+    props.postsDetailsRequest(id);
+  };
 
   return (
     <section className="post">
@@ -15,7 +28,12 @@ const Post = props => {
         author={author}
         timestamp={timestamp}
       />
-      <PostDescription body={body} voteScore={voteScore} />
+      <PostDescription
+        handlePostDetails={handlePostDetails}
+        id={id}
+        body={body}
+        voteScore={voteScore}
+      />
     </section>
   );
 };
