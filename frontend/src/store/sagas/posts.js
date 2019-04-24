@@ -30,7 +30,5 @@ export function* postsUpdateVote(action) {
   const { id, option } = action.payload;
   const { data } = yield call(api.post, `/posts/${id}`, { option });
 
-  console.log(data);
-
   yield put(postsUpdateVoteSuccess(data));
 }
