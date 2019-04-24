@@ -4,6 +4,8 @@ export const POSTS_CATEGORY_REQUEST = "POSTS_CATEGORY_REQUEST";
 export const POSTS_CATEGORY_SUCCESS = "POSTS_CATEGORY_SUCCESS";
 export const POSTS_DETAILS_REQUEST = "POSTS_DETAILS_REQUEST";
 export const POSTS_DETAILS_SUCCESS = "POSTS_DETAILS_SUCCESS";
+export const POST_UPDATE_VOTE_REQUEST = "POST_UPDATE_VOTE_REQUEST";
+export const POST_UPDATE_VOTE_SUCCESS = "POST_UPDATE_VOTE_SUCCESS";
 
 export const postsRequest = () => ({
   type: POSTS_REQUEST
@@ -35,6 +37,21 @@ export const postsDetailsRequest = id => ({
 
 export const postsDetailsSuccess = data => ({
   type: POSTS_DETAILS_SUCCESS,
+  payload: {
+    data
+  }
+});
+
+export const postsUpdateVoteRequest = (id, option) => ({
+  type: POST_UPDATE_VOTE_REQUEST,
+  payload: {
+    id,
+    option
+  }
+});
+
+export const postsUpdateVoteSuccess = data => ({
+  type: POST_UPDATE_VOTE_SUCCESS,
   payload: {
     data
   }
