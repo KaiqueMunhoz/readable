@@ -21,18 +21,20 @@ class Categories extends React.Component {
       <div>
         <nav className="nav">
           <ul className="nav-list">
-            {showCategories &&
+            {showCategories ? (
               categories.map(category => (
                 <Category
                   key={category.name + category.path}
                   category={category.name}
                 />
-              ))}
-            <li className="nav-item">
-              <Link to={"/"} className="pure-button">
-                Home
-              </Link>
-            </li>
+              ))
+            ) : (
+              <div className="nav-item">
+                <Link to={"/"} className="pure-button">
+                  Home
+                </Link>
+              </div>
+            )}
           </ul>
         </nav>
       </div>
