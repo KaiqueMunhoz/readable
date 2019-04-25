@@ -2,6 +2,9 @@ import React from "react";
 import "./style.css";
 import PropTypes from "prop-types";
 import Category from "./Category";
+import { Link } from "react-router-dom";
+
+//Redux
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as CategoriesActions from "../../store/actions/categories";
@@ -12,18 +15,24 @@ class Categories extends React.Component {
   }
 
   render() {
-    const { categories } = this.props;
+    const { categories, showCategories } = this.props;
 
     return (
       <div>
         <nav className="nav">
           <ul className="nav-list">
-            {categories.map(category => (
-              <Category
-                key={category.name + category.path}
-                category={category.name}
-              />
-            ))}
+            {showCategories &&
+              categories.map(category => (
+                <Category
+                  key={category.name + category.path}
+                  category={category.name}
+                />
+              ))}
+            <li className="nav-item">
+              <Link to={"/"} className="pure-button">
+                Home
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>
