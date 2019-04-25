@@ -15,8 +15,13 @@ export default function posts(state = INITIAL_STATE, action) {
       return [...action.payload.data];
     case POSTS_DETAILS_SUCCESS:
       return [...action.payload.data];
-    case POST_UPDATE_VOTE_SUCCESS:
-      return [action.payload.data];
+    case POST_UPDATE_VOTE_SUCCESS: {
+      const postsWithoutUpdate = state.filter(
+        post => post.id !== action.payload.data.id
+      );
+      return [action.payload.data, ...postsWithoutUpdate];
+    }
+
     default:
       return state;
   }
