@@ -10,13 +10,17 @@ import * as PostsActions from "../../../store/actions/posts";
 const Category = props => {
   const { category, postsByCategoryRequest } = props;
 
-  const handleClick = () => {
+  const showPostsByCategory = () => {
     postsByCategoryRequest(category);
   };
 
   return (
     <li className="nav-item">
-      <Link to={`/${category}`} onClick={handleClick} className="pure-button">
+      <Link
+        to={`/${category}`}
+        onClick={showPostsByCategory}
+        className="pure-button"
+      >
         {category}
       </Link>
     </li>

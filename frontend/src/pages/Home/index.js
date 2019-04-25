@@ -8,7 +8,7 @@ import Navbar from "../../components/Navbar";
 const Home = () => {
   return (
     <div className="pure-g">
-      <Header />
+      <Header showCategories={true} />
       <main className="content pure-u-1 pure-u-md-3-4">
         <Navbar />
         <Posts />

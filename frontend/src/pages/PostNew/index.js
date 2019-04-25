@@ -5,7 +5,7 @@ import Navbar from "../../components/Navbar";
 
 const PostNew = () => (
   <div className="pure-g">
-    <Header />
+    <Header showCategories={false} />
     <main className="content pure-u-1 pure-u-md-3-4">
       <Navbar title="New Post" />
       <Form />
