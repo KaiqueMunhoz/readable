@@ -7,6 +7,8 @@ export const POSTS_DETAILS_SUCCESS = "POSTS_DETAILS_SUCCESS";
 export const POST_UPDATE_VOTE_REQUEST = "POST_UPDATE_VOTE_REQUEST";
 export const POST_UPDATE_VOTE_SUCCESS = "POST_UPDATE_VOTE_SUCCESS";
 
+export const POSTS_ORDERED = "POSTS_ORDERED";
+
 export const postsRequest = () => ({
   type: POSTS_REQUEST
 });
@@ -52,6 +54,13 @@ export const postsUpdateVoteRequest = (id, option) => ({
 
 export const postsUpdateVoteSuccess = data => ({
   type: POST_UPDATE_VOTE_SUCCESS,
+  payload: {
+    data
+  }
+});
+
+export const postOrdered = data => ({
+  type: POSTS_ORDERED,
   payload: {
     data
   }
